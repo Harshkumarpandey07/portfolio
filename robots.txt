@@ -1,0 +1,15 @@
+# robots.txt for Harsh Kumar Pandey Portfolio
+# https://harshkumarpandey.vercel.app
+
+# Allow all search engines to crawl everything
+User-agent: *
+Allow: /
+
+# Disallow private or utility paths (none needed here)
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://harshkumarpandey.vercel.app/sitemap.xml
+
+# Crawl-delay (be nice to servers)
+Crawl-delay: 10
