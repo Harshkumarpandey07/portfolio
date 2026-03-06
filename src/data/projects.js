@@ -19,8 +19,8 @@ export const projects = [
       "CNN-based multi-class plant disease classifier built with TensorFlow/Keras. Applied image preprocessing and augmentation (rotation, flipping, zoom, normalization) to improve generalization on limited data. Deployed as a real-time prediction REST API via Flask.",
     tags: ["Python", "TensorFlow", "Keras", "CNN", "Flask", "NumPy", "REST API"],
     category: "Computer Vision",
-    github: "https://github.com/Harshkumarpandey07",
-    demo: null,
+    github: "https://github.com/Harshkumarpandey07/Plant-disease-detection-system",
+    demo: "https://plant-disease-detection-system-uvik.onrender.com",
     featured: true,
   },
   {

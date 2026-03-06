@@ -110,3 +110,8 @@ header[role="banner"]{position:sticky;top:0;z-index:100;background:rgba(8,11,16,
 .footer-bottom small{font-family:var(--font-mono);font-size:.7rem;color:var(--text-2)}
 @media(max-width:768px){.hero{grid-template-columns:1fr;padding:3rem 1.25rem 4rem;min-height:auto;gap:2.5rem}.footer-inner{grid-template-columns:1fr;gap:2rem}.projects-grid{grid-template-columns:1fr}}
 @media(max-width:480px){.nav-links{display:none}.hero h1{font-size:1.6rem}}
+
+.logo-lt { color: var(--text-2); font-family: var(--font-mono); font-size: 1rem; }
+.logo-name { color: var(--accent); font-family: var(--font-mono); font-size: 1rem; font-weight: 600; }
+.logo-slash { color: var(--purple); font-family: var(--font-mono); font-size: 1rem; }
+.logo-gt { color: var(--text-2); font-family: var(--font-mono); font-size: 1rem; }
