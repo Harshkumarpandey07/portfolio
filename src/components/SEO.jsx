@@ -9,7 +9,7 @@ const SEO = ({
   type = "website",
   structuredData = null,
 }) => {
-  const siteUrl = "https://harshkumarpandey.vercel.app";
+  const siteUrl = "https://portfolio07-phi.vercel.app";
   const fullUrl = `${siteUrl}${path}`;
   const fullImage = `${siteUrl}${image}`;
   return (
