@@ -32,7 +32,7 @@ export const projects = [
     tags: ["Python", "scikit-learn", "Random Forest", "Streamlit", "Flask", "Pandas", "NumPy"],
     category: "ML Pipeline",
     github: "https://github.com/Harshkumarpandey07",
-    demo: null,
+    demo: "https://salarypredictionproject-lu6mlarosgwyp9me86zavz.streamlit.app/",
     featured: true,
   },
   {
@@ -44,7 +44,7 @@ export const projects = [
     tags: ["React.js", "JavaScript", "CSS3", "Vercel", "SPA"],
     category: "Full Stack",
     github: "https://github.com/Harshkumarpandey07",
-    demo: null,
+    demo: "https://salarypredictionproject-lu6mlarosgwyp9me86zavz.streamlit.app/",
     featured: false,
   },
 ];
