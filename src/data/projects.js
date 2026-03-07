@@ -40,11 +40,11 @@ export const projects = [
     title: "FreshBite — Online Food Delivery SPA",
     slug: "freshbite-food-delivery",
     description:
-      "Fully responsive food delivery single-page application built in React.js with menu browsing, cart management, and complete order flow. Deployed live on Vercel.",
+      "My first full-stack project — a fully responsive food delivery single-page application built in React.js. Features menu browsing, cart management, and complete order flow with a clean modern UI. Deployed live on Vercel.",
     tags: ["React.js", "JavaScript", "CSS3", "Vercel", "SPA"],
     category: "Full Stack",
-    github: "https://github.com/Harshkumarpandey07",
-    demo: "https://salarypredictionproject-lu6mlarosgwyp9me86zavz.streamlit.app/",
-    featured: false,
+    github: "https://github.com/Harshkumarpandey07/Online-Food-Delivery-Website",
+    demo: "https://freshbite-ruddy.vercel.app/",
+    featured: true,
   },
 ];
