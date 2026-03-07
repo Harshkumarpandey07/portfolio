@@ -14,9 +14,9 @@ export default function Contact() {
 
     try {
       // Replace these with your actual EmailJS credentials
-      const SERVICE_ID = "YOUR_SERVICE_ID";
-      const TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-      const PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+      const SERVICE_ID = "service_h35dhfj";
+      const TEMPLATE_ID = "template_xhq7i0k";
+      const PUBLIC_KEY = "-ZIkWzKtkYcbBD1ev";
 
       const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
         method: "POST",
