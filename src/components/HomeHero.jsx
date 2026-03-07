@@ -1,20 +1,65 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+
+const roles = [
+  "Machine Learning Engineer",
+  "LLM Application Builder",
+  "Full Stack Developer",
+  "AI Systems Engineer",
+];
 
 export default function HomeHero() {
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [displayed, setDisplayed] = useState("");
+  const [typing, setTyping] = useState(true);
+
+  useEffect(() => {
+    const current = roles[roleIndex];
+    let timeout;
+
+    if (typing) {
+      if (displayed.length < current.length) {
+        timeout = setTimeout(() => {
+          setDisplayed(current.slice(0, displayed.length + 1));
+        }, 60);
+      } else {
+        timeout = setTimeout(() => setTyping(false), 1800);
+      }
+    } else {
+      if (displayed.length > 0) {
+        timeout = setTimeout(() => {
+          setDisplayed(displayed.slice(0, -1));
+        }, 30);
+      } else {
+        setRoleIndex((i) => (i + 1) % roles.length);
+        setTyping(true);
+      }
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayed, typing, roleIndex]);
+
   return (
     <section className="hero" aria-labelledby="hero-heading">
       <div className="hero-content">
-        <p className="hero-label">Machine Learning Engineer · Full Stack Developer · Open to Work</p>
+        <p className="hero-label">Open to Work · Fresher · B.Tech CSE 2026</p>
+
         <h1 id="hero-heading">
           Hi, I'm <span className="accent">Harsh Kumar Pandey</span>
         </h1>
+
+        <div className="hero-typing">
+          <span className="typing-text">{displayed}</span>
+          <span className="typing-cursor">|</span>
+        </div>
+
         <p className="hero-bio">
           Final year B.Tech CSE student building <strong>production-grade AI systems</strong>.
           I shipped <strong>HireAI</strong> — an LLM-powered HR automation platform using
-          Groq API (Llama 3.3-70B) with real-time resume scoring, deployed on Vercel.
-          I build end-to-end ML pipelines, REST APIs, and full-stack applications.
-          Seeking a <strong>fresher ML / Software Engineer role</strong> at a startup or MNC.
+          Groq API (Llama 3.3-70B) — and <strong>PhytoSense</strong>, a CNN-based plant
+          disease detector, both live in production. Every project on this portfolio is deployed.
         </p>
+
         <div className="hero-skills">
           {[
             "Python", "TensorFlow", "scikit-learn", "LLM APIs",
@@ -24,6 +69,7 @@ export default function HomeHero() {
             <span key={s} className="skill-chip">{s}</span>
           ))}
         </div>
+
         <div className="hero-cta">
           <a
             href="https://ai-resume-screener-hr-automation.vercel.app"
@@ -32,6 +78,14 @@ export default function HomeHero() {
             className="btn-primary"
           >
             🚀 Live Project
+          </a>
+          <a
+            href="/Harsh_Kumar_Pandey_Resume.pdf"
+            download="Harsh_Kumar_Pandey_Resume.pdf"
+            className="btn-resume"
+            aria-label="Download Harsh Kumar Pandey Resume"
+          >
+            📄 Download Resume
           </a>
           <Link to="/projects" className="btn-secondary">View Projects</Link>
           <a
@@ -45,9 +99,9 @@ export default function HomeHero() {
         </div>
 
         <div className="hero-badges">
-          <span className="badge">🎓 B.Tech CSE 2026 — UCER Prayagraj</span>
+          <span className="badge">🎓 B.Tech CSE 2026 — UCER Prayagraj · CGPA 7.0</span>
           <span className="badge">🏅 NPTEL Elite — Python for Data Science (IIT Madras)</span>
-          <span className="badge">🤖 IBM AI Virtual Internship</span>
+          <span className="badge">🤖 IBM AI Virtual Internship · Sep–Oct 2025</span>
         </div>
       </div>
 
@@ -67,15 +121,18 @@ profile = {
   "role": "ML Engineer",
   "education": "B.Tech CSE 2026",
   "college": "UCER, Prayagraj",
-  "cgpa": 7.0,
-  "flagship_project": "HireAI",
+  "projects_live": 3,
   "llm_used": "Llama 3.3-70B (Groq)",
   "status": "Open to Work 🟢"
 }
 
-# Live project ↓
-# ai-resume-screener-hr-automation
-#           .vercel.app`}</code>
+skills = [
+  "TensorFlow", "scikit-learn",
+  "LLM APIs", "Flask", "React",
+  "Prompt Engineering", "CNN"
+]
+
+# Every project is deployed ✓`}</code>
         </pre>
       </div>
     </section>

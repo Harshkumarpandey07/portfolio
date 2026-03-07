@@ -115,3 +115,297 @@ header[role="banner"]{position:sticky;top:0;z-index:100;background:rgba(8,11,16,
 .logo-name { color: var(--accent); font-family: var(--font-mono); font-size: 1rem; font-weight: 600; }
 .logo-slash { color: var(--purple); font-family: var(--font-mono); font-size: 1rem; }
 .logo-gt { color: var(--text-2); font-family: var(--font-mono); font-size: 1rem; }
+/* ── TYPING ANIMATION ────────────────────────────────────── */
+.hero-typing {
+  font-family: var(--font-mono);
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+  min-height: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.typing-cursor {
+  animation: blink 1s step-end infinite;
+  color: var(--accent);
+  font-weight: 300;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ── RESUME BUTTON ───────────────────────────────────────── */
+.btn-resume {
+  background: transparent;
+  color: var(--orange);
+  font-family: var(--font-mono);
+  font-size: .8rem;
+  font-weight: 600;
+  border: 1px solid var(--orange);
+  padding: .625rem 1.25rem;
+  border-radius: var(--radius);
+  transition: background .2s, box-shadow .2s;
+  display: inline-block;
+  cursor: pointer;
+}
+.btn-resume:hover {
+  background: rgba(255,184,108,.1);
+  box-shadow: 0 0 16px rgba(255,184,108,.3);
+  opacity: 1;
+  color: var(--orange);
+}
+
+/* ── SKILLS SECTION ──────────────────────────────────────── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.skills-card {
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  transition: border-color .2s, transform .2s;
+}
+
+.skills-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+.skills-card-header {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: 1rem;
+}
+
+.skills-icon {
+  font-size: 1.5rem;
+}
+
+.skills-card-header h3 {
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  letter-spacing: .05em;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+
+.skill-tag {
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  color: var(--text-1);
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  padding: .2rem .55rem;
+  border-radius: 4px;
+  transition: border-color .2s, color .2s;
+}
+
+.skill-tag:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── CERTIFICATIONS ──────────────────────────────────────── */
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.25rem;
+}
+
+.cert-card {
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  display: flex;
+  gap: 1.25rem;
+  transition: border-color .2s, transform .2s;
+}
+
+.cert-card:hover {
+  transform: translateY(-2px);
+}
+
+.cert-gold { border-left: 3px solid #f1fa8c; }
+.cert-blue { border-left: 3px solid #64b5f6; }
+
+.cert-badge {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.cert-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .4rem;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.cert-issuer {
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.cert-date {
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  color: var(--text-2);
+}
+
+.cert-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-0);
+  margin-bottom: .4rem;
+}
+
+.cert-grade {
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  color: #f1fa8c;
+  background: rgba(241,250,140,.1);
+  border: 1px solid rgba(241,250,140,.2);
+  padding: .15rem .5rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: .6rem;
+}
+
+.cert-desc {
+  font-size: .85rem;
+  color: var(--text-1);
+  line-height: 1.7;
+}
+
+/* ── CONTACT SECTION ─────────────────────────────────────── */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  font-size: .9rem;
+  color: var(--text-1);
+}
+
+.contact-icon { font-size: 1.1rem; flex-shrink: 0; }
+.contact-item a { color: var(--text-1); transition: color .2s; }
+.contact-item a:hover { color: var(--accent); opacity: 1; }
+
+.contact-resume {
+  margin-top: .5rem;
+  width: fit-content;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+
+.form-group label {
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  color: var(--accent);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: .75rem 1rem;
+  color: var(--text-0);
+  font-family: var(--font-sans);
+  font-size: .9rem;
+  transition: border-color .2s;
+  resize: vertical;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--border-hover);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-2);
+}
+
+.contact-btn {
+  width: fit-content;
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-mono);
+}
+
+.contact-btn:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.form-success {
+  font-family: var(--font-mono);
+  font-size: .82rem;
+  color: var(--green);
+}
+
+.form-error {
+  font-family: var(--font-mono);
+  font-size: .82rem;
+  color: var(--red);
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .certs-grid {
+    grid-template-columns: 1fr;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
